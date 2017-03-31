@@ -1,0 +1,30 @@
+{
+	"name": "persian-tools",
+	"version": "0.0.0",
+	"description": "Javascript Persian Tools",
+	"main": "source/index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ali-master/persian-tools.git"
+	},
+	"keywords": [
+		"persian-tools",
+		"number-to-words",
+		"words-to-number"
+	],
+	"author": "Ali Master <ali_4286@live.com> (useStrict.ir)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ali-master/persian-tools/issues"
+	},
+	"homepage": "https://github.com/ali-master/persian-tools#readme",
+	"devDependencies": {
+		"jest-cli": "^19.0.2"
+	},
+	"jest": {
+		"testEnvironment": "node"
+	}
+}
