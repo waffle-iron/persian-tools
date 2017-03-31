@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "nodemon --exec babel source/index.js -o dist/index.js",
     "build": "rimraf dist && mkdir dist && babel source/index.js -o dist/index.js",
+    "lint": "eslint . ./",
+    "lint:fix": "npm run lint -- --fix",
     "clean": "rimraf dist",
     "test": "jest"
   },
@@ -30,7 +32,12 @@
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
     "babel-preset-es2016": "^6.22.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
     "jest-cli": "^19.0.2",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1"
