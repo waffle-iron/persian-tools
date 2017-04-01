@@ -1,7 +1,3 @@
-'use strict'
-
-import digitsFa2En from './digitsFa2En'
-
 const config = {
   currency: ['تومان', 'ریال'],
   scale: ['', 'هزار', 'میلیون', 'میلیارد']
@@ -48,11 +44,11 @@ numberToWord[800] = 'هشت صد'
 numberToWord[900] = 'نه صد'
 
 /**
-* [toWords, Convert Numbers to Persian Text]
+* [baseWord, Convert Numbers to Persian Text]
 * @param  {[type]} number
 * @return {[type]}
 */
-const toWords = (number) => {
+const baseWord = (number) => {
   let unit = 100
   let result = ''
   while (unit > 0) {
@@ -70,14 +66,14 @@ const toWords = (number) => {
   return result
 }
 
-const getPrice = (number) => {
+const convertToWords = (number, prefix = '') => {
   if (number === '') { return '' }
   if (number === 0) { return '۰' }
 
   const base = 1000
   var result = []
   while (number > 0) {
-    result.push(toWords(number % base))
+    result.push(baseWord(number % base))
     number = Math.floor(number / base)
   }
   if (result.length > 4) { return '' }
@@ -93,35 +89,7 @@ const getPrice = (number) => {
   while (word.endsWith(' و ')) {
     word = word.slice(0, -3)
   }
-  return word + ' ' + config.currency[0]
+  return word + ' ' + prefix
 }
 
-/**
-* [toDigits, Add commos to number]
-* @param  {[string]} number
-* @return {[string]}
-*/
-const toDigits = (number) => {
-  number = '' + number
-  number = digitsFa2En(number)
-  return number && number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')
-}
-/**
-* [removeDigist, Remove all commos in number]
-* @param  {[number]} number
-* @return {[string]}
-*/
-const removeDigist = (number) => {
-  number = '' + number
-  number = digitsFa2En(number)
-  if (number) {
-    while (number.indexOf(',') !== -1) { number = number.replace(',', '') }
-  }
-  return number
-}
-
-export default getPrice
-export {
-  toDigits,
-  removeDigist
-}
+export default convertToWords
