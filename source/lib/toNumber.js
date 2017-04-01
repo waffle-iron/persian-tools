@@ -1,6 +1,7 @@
 // <Refrence path='https://fa.wikipedia.org/wiki/الگو:عدد_به_حروف/توضیحات' />
 
 import {fa2en, en2fa} from './'
+import ReplaceArray from '../util/replaceArray'
 
 const toNumber = {
   units: {
@@ -50,13 +51,21 @@ const toNumber = {
     'بیلیون': 1000000000,
     'تریلیون': 1000000000000
   },
+  otherAdjective: {
+    'شیش صد': 'ششصد',
+    'هفت صد': 'هفتصد',
+    'هشت صد': 'هشتصد',
+    'نه صد': 'نهصد'
+  },
   convert: function (words, digits = 'en') {
     const compute = this.compute(this.tokenize(words))
 
     return digits === 'fa' ? en2fa(compute) : compute
   },
   tokenize: function (words) {
-    let array = words.split(' ')
+    let array = ReplaceArray(words, this.otherAdjective)
+    array = array.split(' ')
+
     let result = []
 
     array.forEach((string) => {
