@@ -1,3 +1,4 @@
-import {isPersian} from './lib'
+import {isPersian, toNumber} from './lib'
 
-console.log(isPersian('سلام علی'))
+console.log(toNumber.convert('نهصد و پنجاه هزار'))
+console.log(isPersian('سلام'))
