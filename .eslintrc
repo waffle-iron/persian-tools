@@ -1,9 +1,17 @@
 {
   "parser"  : "babel-eslint",
+  "indent"  : ["error", "tab", 4],
   "extends" : [
     "standard"
   ],
   "rules": {
     "semi" : [2, "never"]
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true
   }
 }

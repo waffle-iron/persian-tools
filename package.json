@@ -2,17 +2,14 @@
   "name": "persian-tools",
   "version": "0.0.0",
   "description": "Javascript Persian Tools",
-  "main": "dist/index.js",
+  "main": "dist/index.bundle.js",
   "scripts": {
-    "dev": "nodemon --exec babel source/index.js -o dist/index.js",
-    "build": "rimraf dist && mkdir dist && babel source/index.js -o dist/index.js",
+    "dev": "webpack --watch",
+    "build": "rimraf dist && mkdir dist && webpack",
     "lint": "eslint . ./",
     "lint:fix": "npm run lint -- --fix",
     "clean": "rimraf dist",
     "test": "jest"
-  },
-  "engines": {
-    "node": ">=6.0.0"
   },
   "repository": {
     "type": "git",
@@ -33,16 +30,15 @@
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
-    "babel-preset-es2016": "^6.22.0",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
     "jest-cli": "^19.0.2",
-    "nodemon": "^1.11.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "webpack": "^2.3.2"
   },
-  "jest": {
-    "testEnvironment": "node"
-  }
 }
