@@ -1,6 +1,6 @@
 {
   "parser"  : "babel-eslint",
-  "indent"  : ["error", "tab", 4],
+  "indent"  : ["tab", 2],
   "extends" : [
     "standard"
   ],
