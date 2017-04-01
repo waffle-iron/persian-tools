@@ -1,5 +1,7 @@
 // convert persian number to english
 const digitsFa2En = (number) => {
+  if (!isNaN(number)) return number
+
   const numDic = {
     '۰': '0',
     '۱': '1',
@@ -13,9 +15,9 @@ const digitsFa2En = (number) => {
     '۹': '9'
   }
 
-  return parseInt(number.replace(/[۰-۹]/g, (w) => {
+  return number.replace(/[۰-۹]/g, (w) => {
     return numDic[w]
-  }))
+  })
 }
 
 export default digitsFa2En
