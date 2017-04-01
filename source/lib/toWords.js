@@ -36,12 +36,12 @@ numberToWord[90] = 'نود'
 numberToWord[100] = 'صد'
 numberToWord[200] = 'دویست'
 numberToWord[300] = 'سیصد'
-numberToWord[400] = 'چهار صد'
+numberToWord[400] = 'چهارصد'
 numberToWord[500] = 'پانصد'
-numberToWord[600] = 'شش صد'
-numberToWord[700] = 'هفت صد'
-numberToWord[800] = 'هشت صد'
-numberToWord[900] = 'نه صد'
+numberToWord[600] = 'ششصد'
+numberToWord[700] = 'هفتصد'
+numberToWord[800] = 'هشتصد'
+numberToWord[900] = 'نهصد'
 
 /**
 * [baseWord, Convert Numbers to Persian Text]
