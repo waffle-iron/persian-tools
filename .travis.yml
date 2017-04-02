@@ -1,8 +1,22 @@
 sudo: false
 language: node_js
 node_js:
+    - "stable"
     - "4"
     - "6"
 
-after_script:
+cache:
+  directories:
+    - node_modules
+
+before_script:
+    - node --version
+    - npm --version
+    - npm run lint
+    - npm run flow
+
+script:
     - npm run test
+
+after_script:
+    - npm run build
