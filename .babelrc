@@ -1,4 +1,4 @@
 {
-	"presets": ["ES2015"],
+	"presets": ["ES2015", "flow"],
 	"plugins": ["transform-async-to-generator"]
 }
