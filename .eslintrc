@@ -1,11 +1,12 @@
 {
   "parser"  : "babel-eslint",
-  "indent"  : ["tab", 2],
   "extends" : [
     "standard"
   ],
   "rules": {
-    "semi" : [2, "never"]
+    "semi": [2, "never"],
+    "indent": [2, "tab"],
+    "no-tabs": 0
   },
   "ecmaFeatures": {
     "modules": true
