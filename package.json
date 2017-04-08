@@ -9,8 +9,7 @@
     "lint": "eslint . ./",
     "lint:fix": "npm run lint -- --fix",
     "clean": "rimraf dist",
-    "test": "jest",
-    "flow": "flow"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
