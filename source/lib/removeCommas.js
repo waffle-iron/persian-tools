@@ -5,12 +5,12 @@ import fa2en from './'
 * @return {[string]}
 */
 const removeCommas = (number) => {
-  number = '' + number
-  number = fa2en(number)
-  if (number) {
-    while (number.indexOf(',') !== -1) { number = number.replace(',', '') }
-  }
-  return number
+	number = '' + number
+	number = fa2en(number)
+	if (number) {
+		while (number.indexOf(',') !== -1) { number = number.replace(',', '') }
+	}
+	return number
 }
 
 export default removeCommas
