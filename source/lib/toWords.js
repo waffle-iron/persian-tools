@@ -9,7 +9,7 @@ let numToWords = (number) => {
 	const makeGroup = ([ones, tens, huns]) => {
 		return [
 			num(huns) === 0 ? '' : units[huns] + ' صد ',
-			num(ones) === 0 ? adjective[tens] : (adjective[tens] && adjective[tens]) + '-' || '', (units[tens + ones] || units[ones])
+			num(ones) === 0 ? adjective[tens] : adjective[tens], (units[tens + ones] || units[ones])
 		].join('')
 	}
 	const thousand = (group, i) => group === '' ? group : `${group} ${magnitudes[i]}`
