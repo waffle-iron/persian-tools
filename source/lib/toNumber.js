@@ -95,7 +95,6 @@ const toNumber = {
 			} else {
 				sum *= ins.magnitudes[token]
 			}
-			console.log('sum', sum)
 		})
 		return sum
 	}
