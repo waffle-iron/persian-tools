@@ -1,23 +1,23 @@
 // convert persian number to english
 const digitsFa2En = (number) => {
-  if (!isNaN(number)) return number
+	if (!isNaN(number)) return number
 
-  const numDic = {
-    '۰': '0',
-    '۱': '1',
-    '۲': '2',
-    '۳': '3',
-    '۴': '4',
-    '۵': '5',
-    '۶': '6',
-    '۷': '7',
-    '۸': '8',
-    '۹': '9'
-  }
+	const numDic = {
+		'۰': '0',
+		'۱': '1',
+		'۲': '2',
+		'۳': '3',
+		'۴': '4',
+		'۵': '5',
+		'۶': '6',
+		'۷': '7',
+		'۸': '8',
+		'۹': '9'
+	}
 
-  return number.replace(/[۰-۹]/g, (w) => {
-    return numDic[w]
-  })
+	return number.replace(/[۰-۹]/g, (w) => {
+		return numDic[w]
+	})
 }
 
 export default digitsFa2En
